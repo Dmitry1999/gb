@@ -19,6 +19,13 @@ CREATE TABLE `wintershop`.`roles` (
   `username` VARCHAR(45) NULL,
   `role` VARCHAR(45) NULL,
   PRIMARY KEY (`useid`));
+  
+  
+  CREATE TABLE `wintershop`.`cart` (
+  `userid` INT NOT NULL,
+  `goodsname` VARCHAR(45) NULL,
+  `goodsprice` INT NULL,
+  PRIMARY KEY (`userid`));
 
 
 CREATE TABLE `wintershop`.`carts` (
