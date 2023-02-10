@@ -1,0 +1,28 @@
+CREATE TABLE `wintershop`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `surname` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+
+CREATE TABLE `wintershop`.`goods` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `price` INT NULL,
+  PRIMARY KEY (`id`));
+
+
+CREATE TABLE `wintershop`.`roles` (
+  `useid` INT NOT NULL,
+  `usersurname` VARCHAR(45) NULL,
+  `username` VARCHAR(45) NULL,
+  `role` VARCHAR(45) NULL,
+  PRIMARY KEY (`useid`));
+
+
+CREATE TABLE `wintershop`.`carts` (
+  `useid` INT NOT NULL,
+  `listOfGoods` VARCHAR(1000) NULL,
+  `SumPrice` INT NULL,
+  PRIMARY KEY (`useid`));
